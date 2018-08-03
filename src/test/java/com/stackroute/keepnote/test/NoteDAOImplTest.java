@@ -89,12 +89,15 @@ public class NoteDAOImplTest {
 
 	@Test
 	@Rollback(true)
+	 
 	public void testUpdateNote() {
 		noteDAO.saveNote(note);
 		Note noteData = noteDAO.getNoteById(note.getNoteId());
+		System.out.println("editted by us "+noteData);
 		noteData.setNoteContent("Unit testing for DAO layer");
 		noteData.setNoteStatus("Completed");
 		noteData.setCreatedAt(LocalDateTime.now());
+		System.out.println("editted by us again"+noteData);
 		boolean status = noteDAO.UpdateNote(noteData);
 		Note updatedNote = noteDAO.getNoteById(noteData.getNoteId());
 		assertEquals("Unit testing for DAO layer", updatedNote.getNoteContent());

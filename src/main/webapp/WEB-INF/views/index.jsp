@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<h1>Hi welcome to Harita's Application</h1>
 	<!-- Create a form which will have text boxes for Note title, content and status along with a Add 
 		 button. Handle errors like empty fields -->
 
